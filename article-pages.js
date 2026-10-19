@@ -1,13 +1,13 @@
 const articleCatalogue = {
   denials: {
-    eyebrow: 'DENIAL PREVENTION · FIELD NOTE 01',
+    eyebrow: 'INSURANCE & CLAIMS',
     titleAr: ['أين تبدأ رحلة', 'منع رفض المطالبات؟'],
     titleEn: ['Where does denial', 'prevention really begin?'],
     deckAr: 'رفض المطالبة ليس حدثًا منفصلًا في نهاية الرحلة. غالبًا ما يكون نتيجة قرار أو توثيق أو ترميز لم ينتقل بوضوح من نقطة الرعاية إلى الدافع.',
     deckEn: 'A denied claim is rarely an isolated event at the end of the journey. It is often the visible result of a clinical, documentation or coding gap upstream.',
     image: '../assets/basem-office.jpg',
     visual: ['CARE', 'DOCUMENT', 'CLAIM'],
-    readAr: '٧ دقائق', readEn: '7 min read', noteAr: 'قراءة عملية', noteEn: 'Practical field note',
+    readAr: '٧ دقائق', readEn: '7 min read', noteAr: 'قراءة عملية', noteEn: 'Practical article',
     introAr: 'التركيز على إعادة الإرسال وحدها يعالج النتيجة، لكنه لا يمنع تكرارها. الوقاية الحقيقية تبدأ بتتبّع المسار كاملًا: هل كانت الضرورة الطبية واضحة؟ هل وثّق السجل القصة؟ هل نقل الترميز شدّة الحالة؟ وهل طابقت الموافقة الخدمة الفعلية؟',
     introEn: 'Resubmission may recover one claim, but it does not prevent the next denial. Real prevention traces the whole pathway: medical necessity, documentation, coding, authorization and contract logic.',
     railAr: ['الفكرة الأساسية', 'نقاط التحكم', 'خطة 30 يومًا'],
@@ -39,12 +39,12 @@ const articleCatalogue = {
     takeawayEn: 'The strongest denial-prevention program does not start with a denial list. It starts by designing a pathway that makes the clinical story clear and defensible before submission.'
   },
   drg: {
-    eyebrow: 'DRG READINESS · FIELD NOTE 02',
-    titleAr: ['لماذا يُعد DRG', 'برنامجًا مؤسسيًا؟'], titleEn: ['Why is DRG', 'an enterprise program?'],
-    deckAr: 'نجاح DRG لا يصنعه فريق الترميز وحده. إنه نتيجة تزامن التوثيق والبيانات والتكلفة والعقود والحوكمة حول قصة سريرية واحدة.',
-    deckEn: 'DRG success is not produced by coding alone. It emerges when documentation, data, costing, contracts and governance align around one clinical story.',
+    eyebrow: 'PAYMENT MODELS & READINESS',
+    titleAr: ['كيف تستعد المنشأة', 'لنظام DRG؟'], titleEn: ['How can an organization', 'prepare for DRG?'],
+    deckAr: 'الاستعداد لنظام DRG لا يعتمد على الترميز وحده؛ بل يحتاج إلى تعاون واضح بين الفرق الطبية والإدارية والمالية.',
+    deckEn: 'Preparing for DRG is not a coding task alone. It requires clear collaboration across clinical, administrative and financial teams.',
     image: '../assets/basem-executive.jpg', visual: ['CLINICAL','DATA','COST'],
-    readAr: '٨ دقائق', readEn: '8 min read', noteAr: 'دليل جاهزية', noteEn: 'Readiness guide',
+    readAr: '٨ دقائق', readEn: '8 min read', noteAr: 'دليل مبسط', noteEn: 'A clear guide',
     introAr: 'اختزال DRG في نظام تجميع أو تدريب للمُرمزين يجعل المؤسسة ترى جزءًا واحدًا من الصورة. النموذج يختبر جودة السجل، واتساق البيانات، وقدرة المنشأة على فهم التكلفة، وسرعة اتخاذ القرار عبر فرق متعددة.',
     introEn: 'Reducing DRG to a grouper or coder training leaves most of the system untouched. The model tests record quality, data consistency, cost visibility and cross-functional decision speed.',
     railAr: ['مفهوم الجاهزية','الأبعاد الستة','مراحل التطبيق'], railEn: ['Readiness','Six dimensions','Implementation'],
@@ -69,10 +69,10 @@ const articleCatalogue = {
     takeawayEn:'The real sign of DRG readiness is not a running grouper. It is the ability to explain an outcome, trace its source and make a shared decision around it.'
   },
   cdm: {
-    eyebrow:'CHARGE MASTER · FIELD NOTE 03', titleAr:['السعر وحده لا يشرح','قيمة الخدمة.'], titleEn:['A price alone cannot explain','the value of a service.'],
-    deckAr:'حوكمة Charge Master تبدأ من تعريف الخدمة وربطها بالكود والتكلفة والسعر والعقد، لا من مقارنة رقم برقم.',
-    deckEn:'Charge Master governance begins with a service definition connected to code, cost, price and contract—not a number compared with another number.',
-    image:'../assets/basem-studio.jpg', visual:['SERVICE','COST','VALUE'], readAr:'٦ دقائق', readEn:'6 min read', noteAr:'إطار حوكمة', noteEn:'Governance framework',
+    eyebrow:'HEALTHCARE PRICING', titleAr:['كيف يُبنى سعر','الخدمة الصحية؟'], titleEn:['How should a healthcare','service be priced?'],
+    deckAr:'التسعير الجيد يبدأ من فهم الخدمة وتكلفتها وقيمتها، ثم ربطها بالعقد وطريقة تقديم الرعاية.',
+    deckEn:'Good pricing begins with understanding the service, its cost and its value, then connecting them to contracts and care delivery.',
+    image:'../assets/basem-studio.jpg', visual:['SERVICE','COST','VALUE'], readAr:'٦ دقائق', readEn:'6 min read', noteAr:'شرح عملي', noteEn:'Practical overview',
     introAr:'قائمة أسعار ضخمة لا تعني وجود Charge Master منضبط. الجودة تظهر عندما تستطيع المنشأة الإجابة عن خمسة أسئلة لأي خدمة: ما هي؟ كيف تُرمّز؟ ماذا تستهلك؟ كيف سُعّرت؟ وكيف يعاملها العقد؟',
     introEn:'A large price list is not a governed Charge Master. Quality appears when the organization can answer five questions for every service: what is it, how is it coded, what does it consume, how is it priced and how is it treated by contract?',
     railAr:['سلسلة القيمة','علامات الخطر','حوكمة التغيير'], railEn:['Value chain','Warning signs','Change control'],
@@ -92,10 +92,10 @@ const articleCatalogue = {
     takeawayEn:'Value does not come from increasing a price. It comes from defining a service whose cost, price, contract treatment and outcome can be understood with confidence.'
   },
   cdi: {
-    eyebrow:'CLINICAL DOCUMENTATION · FIELD NOTE 04', titleAr:['التوثيق الجيد يحمي','المعنى قبل الإيراد.'], titleEn:['Good documentation protects','meaning before revenue.'],
-    deckAr:'الهدف من CDI ليس زيادة حجم السجل، بل تمثيل حالة المريض والرعاية المقدمة بدقة يمكن فهمها وقياسها والدفاع عنها.',
-    deckEn:'The purpose of CDI is not a longer record. It is an accurate representation of the patient and delivered care that can be understood, measured and defended.',
-    image:'../assets/basem-blue-blazer.jpg', visual:['CLINICAL TRUTH','CLEAR RECORD'], readAr:'٧ دقائق', readEn:'7 min read', noteAr:'ملاحظة سريرية', noteEn:'Clinical field note',
+    eyebrow:'CLINICAL DOCUMENTATION', titleAr:['لماذا يبدأ التحصيل','من توثيق واضح؟'], titleEn:['Why does better revenue begin','with a clear record?'],
+    deckAr:'التوثيق الواضح يحفظ قصة المريض، ويساعد الفرق الطبية والإدارية وشركات التأمين على فهم الرعاية واتخاذ قرار أدق.',
+    deckEn:'Clear documentation protects the patient story and helps clinical, administrative and insurance teams make better decisions.',
+    image:'../assets/basem-blue-blazer.jpg', visual:['CLINICAL TRUTH','CLEAR RECORD'], readAr:'٧ دقائق', readEn:'7 min read', noteAr:'قراءة عملية', noteEn:'Practical article',
     introAr:'عندما لا يوضح السجل سبب القرار السريري أو شدّة الحالة أو العلاقة بين التشخيص والعلاج، تفقد المنظومة جزءًا من الحقيقة. الأثر يظهر في الجودة والترميز والمطالبة والبيانات، وليس في الإيراد فقط.',
     introEn:'When the record does not explain clinical reasoning, severity or the link between diagnosis and treatment, the system loses part of the truth. The impact appears in quality, coding, claims and data—not revenue alone.',
     railAr:['الهدف الحقيقي','الاستفسار الجيد','قياس الأثر'],railEn:['True purpose','Better queries','Measuring impact'],
@@ -154,3 +154,24 @@ const selectedArticle = articleCatalogue[document.body.dataset.articleSlug] || a
 document.body.dataset.page = 'insights';
 document.body.className = 'inner-page article-page article-standalone';
 document.body.innerHTML = renderArticlePage(document.body.dataset.articleSlug || 'denials', selectedArticle);
+
+const articleRailLabel = document.querySelector('.article-rail small');
+if (articleRailLabel) articleRailLabel.innerHTML = '<span class="lang-ar">في هذا المقال</span><span class="lang-en">In this article</span>';
+const articleTakeawayLabel = document.querySelector('.article-takeaway > span');
+if (articleTakeawayLabel) articleTakeawayLabel.innerHTML = '<span class="lang-ar">الخلاصة</span><span class="lang-en">Key takeaway</span>';
+const articleNoteLabel = document.querySelector('.article-side-note strong');
+if (articleNoteLabel) articleNoteLabel.innerHTML = '<span class="lang-ar">ملاحظة</span><span class="lang-en">Note</span>';
+const articleRelatedArabic = document.querySelector('.article-more-head h2.lang-ar');
+const articleRelatedEnglish = document.querySelector('.article-more-head h2.lang-en');
+if (articleRelatedArabic) articleRelatedArabic.innerHTML = 'مقالات أخرى<br>قد تهمك.';
+if (articleRelatedEnglish) articleRelatedEnglish.innerHTML = 'More articles<br>you may find useful.';
+const articleFooterTagline = document.querySelector('.footer-brand small');
+if (articleFooterTagline) articleFooterTagline.innerHTML = '<span class="lang-ar">طبيب · قائد صحي · صانع معرفة</span><span class="lang-en">Physician · Healthcare Leader · Educator</span>';
+const articleBylineArabic = document.querySelector('.article-byline span:first-child small.lang-ar');
+const articleBylineEnglish = document.querySelector('.article-byline span:first-child small.lang-en');
+if (articleBylineArabic) articleBylineArabic.textContent = 'طبيب وقائد في الرعاية الصحية';
+if (articleBylineEnglish) articleBylineEnglish.textContent = 'Physician & healthcare leader';
+const articleNoteArabic = document.querySelector('.article-side-note p.lang-ar');
+const articleNoteEnglish = document.querySelector('.article-side-note p.lang-en');
+if (articleNoteArabic) articleNoteArabic.textContent = 'تعكس هذه القراءة خبرة مهنية عامة، ويختلف التطبيق بحسب طبيعة كل منشأة وأنظمتها.';
+if (articleNoteEnglish) articleNoteEnglish.textContent = 'This article shares general professional experience; application will vary by organization and local requirements.';
