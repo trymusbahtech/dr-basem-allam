@@ -49,11 +49,14 @@ function setLanguage(lang) {
     const tagline = brand.querySelector('small');
     if (arabicName) arabicName.textContent = 'د. باسم علام';
     if (englishName) englishName.textContent = 'Dr. Basem Allam';
-    if (tagline) tagline.textContent = english ? 'HEALTHCARE RCM EXECUTIVE' : 'قيادة دورة الإيرادات الصحية';
+    if (tagline) tagline.textContent = english ? 'PHYSICIAN · HEALTHCARE LEADER' : 'طبيب · قائد في الرعاية الصحية';
+  });
+  document.querySelectorAll('.footer-brand small').forEach((tagline) => {
+    tagline.textContent = english ? 'Physician · Healthcare Leader · Educator' : 'طبيب · قائد صحي · صانع معرفة';
   });
   document.title = english
-    ? (body.dataset.titleEn || 'Dr. Basem Allam | Healthcare RCM Executive')
-    : (body.dataset.titleAr || 'د. باسم علام | قيادة دورة الإيرادات الصحية');
+    ? (body.dataset.titleEn || 'Dr. Basem Allam | Physician & Healthcare Leader')
+    : (body.dataset.titleAr || 'د. باسم علام | طبيب وقائد في الرعاية الصحية');
   updateArticleTitle();
   localStorage.setItem('basem-site-language-v2', lang);
   window.scrollTo(0, scrollPosition);
