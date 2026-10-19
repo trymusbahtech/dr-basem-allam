@@ -25,14 +25,14 @@ function setLanguage(lang) {
   document.title = english
     ? (body.dataset.titleEn || 'Dr. Basem Allam | Healthcare RCM Executive')
     : (body.dataset.titleAr || 'د. باسم علام | قيادة دورة الإيرادات الصحية');
-  localStorage.setItem('basem-site-language', lang);
+  localStorage.setItem('basem-site-language-v2', lang);
   window.scrollTo(0, scrollPosition);
   updateJourneyCompass(activeJourneyStep);
   requestAnimationFrame(() => { root.style.scrollBehavior = priorBehavior; });
 }
 
 const requestedLanguage = new URLSearchParams(location.search).get('lang');
-setLanguage(requestedLanguage || localStorage.getItem('basem-site-language') || 'ar');
+setLanguage(requestedLanguage || localStorage.getItem('basem-site-language-v2') || 'en');
 
 langToggle?.addEventListener('click', () => setLanguage(root.lang === 'ar' ? 'en' : 'ar'));
 
