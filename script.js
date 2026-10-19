@@ -110,7 +110,14 @@ if (careerImage && careerMedia) {
       const nextImage = new Image();
       nextImage.onload = () => {
         careerImage.src = item.dataset.image;
-        careerImage.style.objectPosition = item.dataset.image.includes('basem-office') ? 'center bottom' : 'center';
+        const focus = item.dataset.image.includes('basem-office')
+          ? 'center 39%'
+          : item.dataset.image.includes('basem-executive')
+            ? 'center 34%'
+            : item.dataset.image.includes('basem-studio')
+              ? 'center 36%'
+              : 'center 18%';
+        careerImage.style.objectPosition = focus;
         careerMedia.classList.remove('is-changing');
       };
       nextImage.src = item.dataset.image;
