@@ -11,8 +11,8 @@ function setLanguage(lang) {
   root.dir = isEnglish ? 'ltr' : 'rtl';
   document.body.classList.toggle('is-en', isEnglish);
   document.title = isEnglish
-    ? 'Dr. Basem Allam | RCM & Healthcare Executive'
-    : 'د. باسم علام | قيادة دورة الإيرادات والتأمين الصحي';
+    ? 'Dr. Basem Allam | Medicine, Insurance & Revenue Cycle'
+    : 'د. باسم علام | الطب، التأمين ودورة الإيرادات';
   localStorage.setItem('basem-site-language', lang);
 }
 
@@ -20,7 +20,14 @@ const queryLanguage = new URLSearchParams(location.search).get('lang');
 setLanguage(queryLanguage || localStorage.getItem('basem-site-language') || 'ar');
 
 langToggle.addEventListener('click', () => {
+  const scrollPosition = window.scrollY;
+  const previousScrollBehavior = root.style.scrollBehavior;
+  root.style.scrollBehavior = 'auto';
   setLanguage(root.lang === 'ar' ? 'en' : 'ar');
+  window.scrollTo(0, scrollPosition);
+  requestAnimationFrame(() => {
+    root.style.scrollBehavior = previousScrollBehavior;
+  });
 });
 
 menuToggle.addEventListener('click', () => {
