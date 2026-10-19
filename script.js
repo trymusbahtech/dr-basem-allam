@@ -26,9 +26,9 @@ function setLanguage(lang) {
     const arabicName = brand.querySelector('strong.lang-ar');
     const englishName = brand.querySelector('strong.lang-en');
     const tagline = brand.querySelector('small');
-    if (arabicName) arabicName.textContent = 'دكتور علام';
-    if (englishName) englishName.textContent = 'Dr 3llam';
-    if (tagline) tagline.textContent = english ? 'HEALTH INSURANCE' : 'للتأمين الصحي';
+    if (arabicName) arabicName.textContent = 'د. باسم علام';
+    if (englishName) englishName.textContent = 'Dr. Basem Allam';
+    if (tagline) tagline.textContent = english ? 'HEALTHCARE RCM EXECUTIVE' : 'قيادة دورة الإيرادات الصحية';
   });
   document.title = english
     ? (body.dataset.titleEn || 'Dr. Basem Allam | Healthcare RCM Executive')
@@ -150,7 +150,7 @@ document.querySelectorAll('.episode').forEach((episode) => {
   });
 });
 
-function openVideo(videoId, title = 'Dr 3llam video') {
+function openVideo(videoId, title = 'Dr. Basem Allam video') {
   if (!dialog || !iframe || !videoId) return;
   const directLink = dialog.querySelector('.video-direct-link');
   const dialogTitle = dialog.querySelector('.video-dialog-title');
@@ -167,7 +167,7 @@ document.addEventListener('click', (event) => {
   if (!trigger) return;
   event.preventDefault();
   const titleElement = trigger.querySelector('.lang-ar, .video-card-title');
-  openVideo(trigger.dataset.video, titleElement?.textContent?.trim() || 'Dr 3llam video');
+  openVideo(trigger.dataset.video, titleElement?.textContent?.trim() || 'Dr. Basem Allam video');
 });
 
 function closeVideo() {
