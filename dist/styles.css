@@ -87,6 +87,13 @@ html[lang="en"] .hero h1 { font-size: clamp(52px, 5.3vw, 88px); line-height: .98
 .hero-portrait img { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 18%; clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%, 0 16%); filter: saturate(.82) contrast(1.04); }
 [dir="rtl"] .hero-portrait img { clip-path: polygon(0 0, 91% 0, 100% 16%, 100% 100%, 0 100%); }
 .hero-portrait::after { content: ""; position: absolute; z-index: 2; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(7,29,24,.76)); pointer-events: none; }
+.hero-video-hit { position: absolute; z-index: 4; inset: 0; padding: 0; border: 0; color: var(--white); background: transparent; cursor: pointer; text-align: start; }
+.hero-video-hit::before { content: ""; position: absolute; inset: 0; border: 1px solid transparent; transition: border-color .25s ease, background .25s ease; }
+.hero-video-hit:hover::before, .hero-video-hit:focus-visible::before { border-color: rgba(240,195,0,.72); background: rgba(7,29,24,.12); }
+.hero-video-play { position: absolute; inset: auto auto 98px 28px; min-height: 52px; padding-inline-end: 18px; display: inline-flex; align-items: center; gap: 12px; color: var(--ink); background: var(--gold); box-shadow: 0 12px 32px rgba(0,0,0,.22); font-size: 11px; font-weight: 700; transition: transform .25s ease, background .25s ease; }
+[dir="rtl"] .hero-video-play { inset-inline: 28px auto; }
+.hero-video-play .icon { width: 52px; height: 52px; padding: 17px; color: var(--white); background: var(--green); }
+.hero-video-hit:hover .hero-video-play { transform: translateY(-4px); background: #ffd92f; }
 .portrait-halo { position: absolute; z-index: 0; width: 58%; aspect-ratio: 1; inset: 2% auto auto -8%; border: 1px solid rgba(240,195,0,.55); border-radius: 50%; }
 [dir="rtl"] .portrait-halo { inset-inline: auto -8%; }
 .hero-portrait figcaption { position: absolute; z-index: 3; inset: auto 0 32px auto; display: flex; align-items: center; gap: 10px; padding: 14px 17px; color: var(--ink); background: var(--white); font-size: 11px; font-weight: 600; }
@@ -294,6 +301,7 @@ footer > a:last-child { justify-self: end; font-size: 12px; }
   .hero-portrait { min-height: 490px; }
   .hero-portrait.reveal { opacity: 1; transform: none; }
   .hero-portrait figcaption { inset-block-end: 18px; }
+  .hero-video-play { inset-block-end: 82px; inset-inline: 18px auto; }
   .portrait-code { inset-block-start: 18px; }
   .care-path { min-height: 74px; gap: 8px; overflow-x: auto; }
   .care-path > i { min-width: 20px; }
