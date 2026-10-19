@@ -14,6 +14,27 @@ function icon(name, className = 'icon') {
   return `<svg class="${className}" aria-hidden="true"><use href="assets/icons.svg#${name}"></use></svg>`;
 }
 
+function getActiveArticle() {
+  return document.querySelector('.article-document:not([hidden])');
+}
+
+function updateArticleTitle() {
+  const article = getActiveArticle();
+  if (!article) return;
+  const languageClass = root.lang === 'ar' ? '.lang-ar' : '.lang-en';
+  const title = article.querySelector(`.article-title ${languageClass}`)?.innerText.replace(/\s+/g, ' ').trim();
+  if (title) document.title = `${title} | ${root.lang === 'ar' ? 'د. باسم علام' : 'Dr. Basem Allam'}`;
+}
+
+function activateArticle() {
+  const articles = [...document.querySelectorAll('.article-document[data-article]')];
+  if (!articles.length) return;
+  const requestedSlug = new URLSearchParams(location.search).get('article') || 'denials';
+  const active = articles.find((article) => article.dataset.article === requestedSlug) || articles[0];
+  articles.forEach((article) => { article.hidden = article !== active; });
+  body.dataset.activeArticle = active.dataset.article;
+}
+
 function setLanguage(lang) {
   const english = lang === 'en';
   const scrollPosition = window.scrollY;
@@ -33,6 +54,7 @@ function setLanguage(lang) {
   document.title = english
     ? (body.dataset.titleEn || 'Dr. Basem Allam | Healthcare RCM Executive')
     : (body.dataset.titleAr || 'د. باسم علام | قيادة دورة الإيرادات الصحية');
+  updateArticleTitle();
   localStorage.setItem('basem-site-language-v2', lang);
   window.scrollTo(0, scrollPosition);
   updateJourneyCompass(activeJourneyStep);
@@ -40,6 +62,7 @@ function setLanguage(lang) {
 }
 
 const requestedLanguage = new URLSearchParams(location.search).get('lang');
+activateArticle();
 setLanguage(requestedLanguage || localStorage.getItem('basem-site-language-v2') || 'en');
 
 langToggle?.addEventListener('click', () => setLanguage(root.lang === 'ar' ? 'en' : 'ar'));
@@ -235,6 +258,17 @@ contactForm?.addEventListener('submit', (event) => {
 
 document.querySelectorAll('[data-icon]').forEach((element) => {
   if (!element.querySelector('svg')) element.insertAdjacentHTML('afterbegin', icon(element.dataset.icon));
+});
+
+document.querySelectorAll('.insight-card[id]').forEach((card) => {
+  if (card.querySelector('.insight-card-link')) return;
+  const link = document.createElement('a');
+  link.className = 'insight-card-link';
+  link.href = `article.html?article=${card.id}`;
+  link.innerHTML = '<span class="lang-ar">اقرأ المقال كاملًا</span><span class="lang-en">Read the full article</span><b aria-hidden="true">↗</b>';
+  const summary = card.querySelector('details');
+  if (summary) summary.before(link);
+  else card.append(link);
 });
 
 document.querySelectorAll('#year').forEach((year) => { year.textContent = new Date().getFullYear(); });
