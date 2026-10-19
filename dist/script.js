@@ -22,6 +22,14 @@ function setLanguage(lang) {
   root.lang = english ? 'en' : 'ar';
   root.dir = english ? 'ltr' : 'rtl';
   body.classList.toggle('is-en', english);
+  document.querySelectorAll('.site-header .brand').forEach((brand) => {
+    const arabicName = brand.querySelector('strong.lang-ar');
+    const englishName = brand.querySelector('strong.lang-en');
+    const tagline = brand.querySelector('small');
+    if (arabicName) arabicName.textContent = 'دكتور علام';
+    if (englishName) englishName.textContent = 'Dr 3llam';
+    if (tagline) tagline.textContent = english ? 'HEALTH INSURANCE' : 'للتأمين الصحي';
+  });
   document.title = english
     ? (body.dataset.titleEn || 'Dr. Basem Allam | Healthcare RCM Executive')
     : (body.dataset.titleAr || 'د. باسم علام | قيادة دورة الإيرادات الصحية');
