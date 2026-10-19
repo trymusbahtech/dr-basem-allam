@@ -260,15 +260,4 @@ document.querySelectorAll('[data-icon]').forEach((element) => {
   if (!element.querySelector('svg')) element.insertAdjacentHTML('afterbegin', icon(element.dataset.icon));
 });
 
-document.querySelectorAll('.insight-card[id]').forEach((card) => {
-  if (card.querySelector('.insight-card-link')) return;
-  const link = document.createElement('a');
-  link.className = 'insight-card-link';
-  link.href = `article.html?article=${card.id}`;
-  link.innerHTML = '<span class="lang-ar">اقرأ المقال كاملًا</span><span class="lang-en">Read the full article</span><b aria-hidden="true">↗</b>';
-  const summary = card.querySelector('details');
-  if (summary) summary.before(link);
-  else card.append(link);
-});
-
 document.querySelectorAll('#year').forEach((year) => { year.textContent = new Date().getFullYear(); });
